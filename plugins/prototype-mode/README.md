@@ -2,6 +2,8 @@
 
 A Claude Code plugin that flags a project for **prototype mode**: no git worktrees, iterate and commit directly on the current branch (main included). Works for interactive sessions and background jobs.
 
+![prototype-mode demo: /proto on, then Claude edits, tests and commits directly on main](https://raw.githubusercontent.com/brunolca/claude-plugins/main/docs/prototype-mode.gif)
+
 ## Install
 
 ```sh
