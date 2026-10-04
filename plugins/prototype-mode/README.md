@@ -5,11 +5,11 @@ A Claude Code plugin that flags a project for **prototype mode**: no git worktre
 ## Install
 
 ```sh
-claude plugin marketplace add brunolca/claude-agents-proto-mode
-claude plugin install prototype-mode@proto-mode
+claude plugin marketplace add brunolca/claude-plugins
+claude plugin install prototype-mode@brunolca
 ```
 
-Or from inside Claude Code: `/plugin marketplace add brunolca/claude-agents-proto-mode`, then `/plugin install prototype-mode@proto-mode`.
+Or from inside Claude Code: `/plugin marketplace add brunolca/claude-plugins`, then `/plugin install prototype-mode@brunolca`.
 
 ### Share it with a team (per repo)
 
@@ -18,11 +18,11 @@ Commit this to the project's `.claude/settings.json` so everyone who trusts the 
 ```json
 {
   "extraKnownMarketplaces": {
-    "proto-mode": {
-      "source": { "source": "github", "repo": "brunolca/claude-agents-proto-mode" }
+    "brunolca": {
+      "source": { "source": "github", "repo": "brunolca/claude-plugins" }
     }
   },
-  "enabledPlugins": { "prototype-mode@proto-mode": true },
+  "enabledPlugins": { "prototype-mode@brunolca": true },
   "worktree": { "bgIsolation": "none" }
 }
 ```
@@ -55,7 +55,3 @@ claude plugin test .
 ```
 
 Requires a Claude Code build with function-hook plugins (2.1.289 or newer).
-
-## License
-
-MIT

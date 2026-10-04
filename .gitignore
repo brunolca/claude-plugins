@@ -1,0 +1,6 @@
+# Laid by Claude Code at every load of a plugin folder (API types, tool types, tsconfig base)
+**/.claude-plugin/types/
+# per-user Claude Code settings
+.claude/settings.local.json
+.DS_Store
+node_modules/

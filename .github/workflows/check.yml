@@ -1,0 +1,29 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  plugins:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install -g @anthropic-ai/claude-code
+      - name: Validate marketplace
+        run: claude plugin validate .
+      - name: Validate and test each plugin
+        run: |
+          status=0
+          for dir in plugins/*/; do
+            echo "::group::$dir"
+            claude plugin validate "$dir" || status=1
+            if ls "$dir"tests/*.test.ts* >/dev/null 2>&1; then
+              claude plugin test "$dir" || status=1
+            fi
+            echo "::endgroup::"
+          done
+          exit $status

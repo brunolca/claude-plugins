@@ -1,0 +1,28 @@
+{
+  "name": "brunolca",
+  "owner": {
+    "name": "Bruno Carneiro",
+    "url": "https://github.com/brunolca"
+  },
+  "metadata": {
+    "description": "Bruno Carneiro's Claude Code plugins"
+  },
+  "plugins": [
+    {
+      "name": "prototype-mode",
+      "source": "./plugins/prototype-mode",
+      "description": "Flag a project for prototype mode: no git worktrees, iterate and commit directly on the current branch (main included). Works for background jobs too.",
+      "version": "0.2.0",
+      "category": "productivity",
+      "keywords": ["git", "worktree", "prototype", "background-jobs"]
+    },
+    {
+      "name": "worktree-terminal",
+      "source": "./plugins/worktree-terminal",
+      "description": "Open a terminal split, tab or window in the session's worktree or any agent's worktree: /term, or the buttons above the prompt",
+      "version": "0.1.0",
+      "category": "productivity",
+      "keywords": ["terminal", "worktree", "agents", "kitty", "tmux", "wezterm", "iterm"]
+    }
+  ]
+}

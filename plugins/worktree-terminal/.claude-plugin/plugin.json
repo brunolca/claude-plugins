@@ -6,8 +6,8 @@
     "name": "Bruno Carneiro",
     "url": "https://github.com/brunolca"
   },
-  "homepage": "https://github.com/brunolca/claude-code-terminal",
-  "repository": "https://github.com/brunolca/claude-code-terminal",
+  "homepage": "https://github.com/brunolca/claude-plugins/tree/main/plugins/worktree-terminal",
+  "repository": "https://github.com/brunolca/claude-plugins",
   "license": "MIT",
   "keywords": [
     "terminal",
