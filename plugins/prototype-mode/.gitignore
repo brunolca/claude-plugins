@@ -1,0 +1,7 @@
+# per-user Claude Code settings (prototype mode flag for you only)
+.claude/settings.local.json
+# type declarations the engine lays beside a loaded mod
+.claude-plugin/types/
+tsconfig.json
+node_modules/
+.DS_Store

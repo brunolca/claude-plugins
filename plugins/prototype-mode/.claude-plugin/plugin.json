@@ -1,0 +1,10 @@
+{
+  "name": "prototype-mode",
+  "version": "0.2.0",
+  "description": "Flag a project for prototype mode: no git worktrees, iterate and commit directly on the current branch (main included). Works for background jobs too.",
+  "author": { "name": "brunolca" },
+  "homepage": "https://github.com/brunolca/claude-agents-proto-mode",
+  "repository": "https://github.com/brunolca/claude-agents-proto-mode",
+  "license": "MIT",
+  "keywords": ["git", "worktree", "prototype", "background-jobs"]
+}
