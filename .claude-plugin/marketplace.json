@@ -1,0 +1,13 @@
+{
+  "name": "proto-mode",
+  "owner": { "name": "brunolca" },
+  "metadata": { "description": "Prototype mode for Claude Code: skip worktrees, iterate on main." },
+  "plugins": [
+    {
+      "name": "prototype-mode",
+      "source": "./",
+      "description": "Flag a project for prototype mode: no git worktrees, iterate and commit directly on the current branch (main included). Works for background jobs too.",
+      "version": "0.2.0"
+    }
+  ]
+}
