@@ -1,0 +1,63 @@
+{
+  "name": "worktree-terminal",
+  "version": "0.1.0",
+  "description": "Open a terminal in the session's worktree or any agent's worktree: /term, or the buttons above the prompt",
+  "author": {
+    "name": "Bruno Carneiro",
+    "url": "https://github.com/brunolca"
+  },
+  "homepage": "https://github.com/brunolca/claude-code-terminal",
+  "repository": "https://github.com/brunolca/claude-code-terminal",
+  "license": "MIT",
+  "keywords": [
+    "terminal",
+    "worktree",
+    "agents",
+    "kitty",
+    "tmux",
+    "wezterm",
+    "iterm"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "terminal": {
+      "type": "string",
+      "title": "Terminal app",
+      "description": "Which terminal /term opens; auto detects it from the window Claude runs in",
+      "default": "auto",
+      "options": [
+        "auto",
+        "tmux",
+        "zellij",
+        "kitty",
+        "wezterm",
+        "iterm",
+        "ghostty",
+        "warp",
+        "alacritty",
+        "gnome-terminal",
+        "konsole",
+        "terminal",
+        "system",
+        "custom"
+      ]
+    },
+    "placement": {
+      "type": "string",
+      "title": "Placement",
+      "description": "split (right of Claude), tab or window; falls back to what the terminal supports",
+      "default": "split",
+      "options": [
+        "split",
+        "tab",
+        "window"
+      ]
+    },
+    "customCommand": {
+      "type": "string",
+      "title": "Custom command",
+      "description": "Used when Terminal app is custom: argv split on spaces, {dir} replaced by the worktree path",
+      "default": ""
+    }
+  }
+}
