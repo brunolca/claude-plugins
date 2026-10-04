@@ -4,6 +4,8 @@ A Claude Code mod that opens a terminal in the worktree you or your agents are w
 
 When Claude runs agents in their own git worktrees (`Agent` with `isolation: "worktree"`, `EnterWorktree`), their changes live in `.claude/worktrees/<name>`. `/term` opens a shell right there: as a split next to Claude, a tab, or a window.
 
+![worktree-terminal demo: /term list shows agent worktrees, /term 2 opens a kitty split in one, a button opens the other](https://raw.githubusercontent.com/brunolca/claude-plugins/main/docs/worktree-terminal.gif)
+
 ## Usage
 
 | Command | Opens |
