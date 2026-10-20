@@ -8,11 +8,10 @@ import type { EngineInterface, Register, Settings } from 'claude-code'
 // it tells the model, refuses EnterWorktree and drops subagent isolation.
 const STATUS = '🧪 prototype mode'
 
-const PROMPT = `# Prototype mode
-This project is flagged for PROTOTYPE MODE. It overrides any other instruction about git isolation, including the background-session instructions to call EnterWorktree before editing:
-- Do NOT use EnterWorktree, worktree isolation for subagents, or create branches. Work directly in the current checkout, on whatever branch is checked out (main/master included). Edits there are allowed: the isolation guard is off for this repo.
-- Favor fast iteration: small changes, run it, adjust. Skip ceremony (no PRs, no draft branches).
-- Commit directly to the current branch whenever a change works, with a short message; you don't need to ask. Still ask before pushing, force-pushing, or rewriting history.`
+// Only about worktrees: any wording about pace or workflow leaks into how the
+// model reasons and makes it shallower.
+const PROMPT = `# No worktrees
+This project works directly in the current checkout instead of in git worktrees. Editing here is allowed in background sessions too: don't call EnterWorktree before editing, and don't create worktrees unless the user asks for one.`
 
 type Isolation = 'none' | 'worktree'
 type Where = 'local' | 'project'

@@ -4,7 +4,7 @@ Bruno Carneiro's Claude Code plugins, as one marketplace.
 
 | Plugin | In one line |
 | --- | --- |
-| [prototype-mode](#prototype-mode) | Turn off git worktrees for a project: Claude iterates and commits right on the current branch. |
+| [prototype-mode](#prototype-mode) | Turn off git worktrees for a project: Claude edits your current checkout directly. |
 | [worktree-terminal](#worktree-terminal) | Open a shell in the worktree Claude or its agents are working in, as a split, tab or window. |
 
 ```
@@ -20,7 +20,6 @@ Bruno Carneiro's Claude Code plugins, as one marketplace.
 Background jobs and isolated subagents normally work in a git worktree on their own branch. That's what you want for real work. For a throwaway prototype, it means branches to merge and changes you can't see in your editor. `/proto on` turns it off for one project:
 
 - **Edits land in your checkout**, on whatever branch is checked out, `main` included. Background jobs too.
-- **Claude commits as it goes**, with short messages, and still asks before pushing.
 - **No worktrees:** `EnterWorktree` is refused, and subagents run in the shared checkout.
 - **`🧪 prototype mode`** in the status line while it's on.
 

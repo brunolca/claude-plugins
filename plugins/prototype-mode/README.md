@@ -1,6 +1,6 @@
 # prototype-mode
 
-A Claude Code plugin that flags a project for **prototype mode**: no git worktrees, iterate and commit directly on the current branch (main included). Works for interactive sessions and background jobs.
+A Claude Code plugin that flags a project for **prototype mode**: no git worktrees, Claude edits the current checkout directly. Works for interactive sessions and background jobs.
 
 ![prototype-mode demo: /proto on, then Claude edits, tests and commits directly on main](https://raw.githubusercontent.com/brunolca/claude-plugins/main/docs/prototype-mode.gif)
 
@@ -45,7 +45,7 @@ The status line shows `🧪 prototype mode` while it's on.
 ## How it works
 
 - **Background jobs:** `worktree.bgIsolation: "none"` is Claude Code's own setting. It turns off the guard that blocks Edit/Write in the main checkout until `EnterWorktree` is called. The `CLAUDE_BG_ISOLATION` env var outranks it. This part works even without the plugin.
-- **Model instructions:** while it's on, every request gets a "Prototype mode" system-prompt section. It overrides the background-session instruction to isolate, and says to commit on the current branch but ask before pushing.
+- **Model instructions:** while it's on, every request gets a short "No worktrees" system-prompt section telling Claude to edit the current checkout instead of calling `EnterWorktree`. It says nothing else about how to work.
 - **Tools:** `EnterWorktree` is refused, and `isolation: "worktree"` is stripped from subagent (`Agent`) calls.
 
 ## Develop
